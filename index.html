@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="style.css ">
+</head>
+
+<body>
+
+    <div class="main">
+        <h1 id="head">Income Expense calculator</h1>
+        <div class="container">
+            <div class="box">
+                <h2 id="fmtb">Add Income</h2>
+                <form id="income-box">
+                    <input type="text" placeholder="category" id="incomecat">
+                    <p id="incat" class="error-message"></p>
+                    <input type="number" placeholder="amount" id="incomeamt">
+                    <p id="inamt" class="error-message"></p>
+                    <button type="submit">Add income</button>
+                </form>
+            </div>
+
+            <div class="box">
+                <h2 id="fmtb">Add Expense</h2>
+                <form id="expense-box">
+                    <input type="text" placeholder="category" id="expensecat">
+                    <p id="excat" class="error-message"></p>
+                    <input type="number" placeholder="amount" id="expenseamt">
+                    <p id="examt" class="error-message"></p>
+                    <button type="submit">Add Expense</button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="tab">
+                <table id="incometable">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Income Table</th>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="intablebody"></tbody>
+                </table>
+                <p>Total Income: <span id="totalincome">0</span></p>
+            </div>
+            <div class="tab2">
+                <table id="expensetable">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Expense Table</th>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="extablebody"></tbody>
+                </table>
+                <p>Total Expense: <span id="totalexpense">0</span></p>
+            </div>
+        </div>
+        <h2 class="bal">Balance: <span id="total">0</span></h2>
+
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
